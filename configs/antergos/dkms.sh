@@ -8,14 +8,14 @@ _MODVER="${_MODVER_STR/.r*}"
 
 pacman -S --needed linux-headers
 
-echo '>>> Updating module dependencies. Please wait ...'
+#echo '>>> Updating module dependencies. Please wait ...'
 
-if [[ $(dkms status -k "${_KERNVER}" "spl/${_MODVER}") != *'installed'* ]]; then
-	{ dkms install -k "${_KERNVER}" "spl/${_MODVER}"; } || exit 1
-fi
+#if [[ $(dkms status -k "${_KERNVER}" "spl/${_MODVER}") != *'installed'* ]]; then
+#	{ dkms install -k "${_KERNVER}" "spl/${_MODVER}"; } || exit 1
+#fi
 
-if [[ $(dkms status -k "${_KERNVER}" "zfs/${_MODVER}") != *'installed'* ]]; then
-	{ dkms install -k "${_KERNVER}" "zfs/${_MODVER}"; } || exit 1
-fi
+#if [[ $(dkms status -k "${_KERNVER}" "zfs/${_MODVER}") != *'installed'* ]]; then
+#	{ dkms install -k "${_KERNVER}" "zfs/${_MODVER}"; } || exit 1
+#fi
 
 { mkinitcpio -p linux && exit 0; } || exit 1

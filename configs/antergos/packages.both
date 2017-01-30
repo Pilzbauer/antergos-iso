@@ -60,7 +60,7 @@ mtools
 ntfs-3g
 squashfs-tools
 xfsprogs
-zfs
+#zfs
 
 # Xorg & Graphics Drivers
 
@@ -156,7 +156,6 @@ gst-plugins-good
 gst-plugins-ugly
 gstreamer-vaapi
 gvfs-mtp
-libgnomeui
 libwnck3
 mutter
 nautilus
