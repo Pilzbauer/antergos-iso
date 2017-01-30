@@ -1,4 +1,4 @@
-Modified version of archiso to build the Antergos ISO
+Modified version of Antergos ISO with included nvidia driver to install it with a GTX 970.
 
 ## Dependencies ##
 
@@ -8,7 +8,7 @@ Modified version of archiso to build the Antergos ISO
 - libisoburn
 - mkinitcpio-nfs-utils
 - make
-- openfonts (tgz file)
+- openfonts (https://www.archlinux.org/packages/community/any/opendesktop-fonts/download/)
 - patch
 - squashfs-tools
 - wget
@@ -21,8 +21,9 @@ Modified version of archiso to build the Antergos ISO
  (or setup isolinux/syslinux).
  - Create destination folder `/out` : `sudo mkdir /out`
  - Create a symlink to your working directory and call it `/start` : `sudo ln -s /var/tmp/antergos /start`
- - Build the iso (run the command inside the `/var/tmp/antergos` directory): `sudo ./build.sh build dual`
- 
+ - Download openfonts (see dependencies) and move it to `/start`
+ - Build the iso (run the command inside the `/var/tmp/antergos/configs/antergos` directory): `sudo ./build.sh build dual`
+
 /start and /out are defaults. You can change it passing the desired directories as parameters to build.sh
 
 If you want to try to build the iso again, please remember to clean all generated files first: `sudo ./build.sh clean`
